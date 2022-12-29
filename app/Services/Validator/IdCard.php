@@ -39,7 +39,7 @@ class IdCard
      *
      * @return bool|mixed
      */
-    protected static function MethodIdCardVerifyNumber(string $IdCardBase)
+    protected static function MethodIdCardVerifyNumber(string $IdCardBase): mixed
     {
         if (strlen($IdCardBase) !== 17) {
             return false;
@@ -63,7 +63,7 @@ class IdCard
      *
      * @return bool|string
      */
-    protected static function MethodIdCard15to18(string $IdCard)
+    protected static function MethodIdCard15to18(string $IdCard): bool|string
     {
         if (strlen($IdCard) !== 15) {
             return false;
@@ -80,7 +80,7 @@ class IdCard
     }
 
     // 18位身份证校验码有效性检查
-    protected static function MethodIdCardChecksum18(string $IdCard)
+    protected static function MethodIdCardChecksum18(string $IdCard): bool
     {
         if (strlen($IdCard) !== 18) {
             return false;
